@@ -169,7 +169,7 @@
   <div class="row">
     
       <div class="special-category is-data-Спец.категории 2 cell-">
-        <a href="https://mactak-yaroslavl.ru/collection/ruchnoy-instrument" class="category-inner">
+        <a href="#" class="category-inner">
 
           <div class="category-image-wrapper">
             <span class="category-image-inner image-container is-square ">
@@ -189,7 +189,7 @@
       
 
       <div class="special-category is-data-Спец.категории 2 cell-">
-        <a href="https://mactak-yaroslavl.ru/collection/spetsinstrument" class="category-inner">
+        <a href="#" class="category-inner">
 
           <div class="category-image-wrapper">
             <span class="category-image-inner image-container is-square ">
@@ -211,7 +211,7 @@
       
 
       <div class="special-category is-data-Спец.категории 2 cell-">
-        <a href="https://mactak-yaroslavl.ru/collection/pnevmoinstrument" class="category-inner">
+        <a href="#" class="category-inner">
 
           <div class="category-image-wrapper">
             <span class="category-image-inner image-container is-square ">
@@ -251,7 +251,7 @@
       
 
       <div class="special-category is-data-Спец.категории 3 cell-">
-        <a href="https://mactak-yaroslavl.ru/collection/elektrika-i-svet" class="category-inner">
+        <a href="#" class="category-inner">
 
           <div class="category-image-wrapper">
             <span class="category-image-inner image-container is-square ">
@@ -273,7 +273,7 @@
       
 
       <div class="special-category is-data-Спец.категории 3 cell-">
-        <a href="https://mactak-yaroslavl.ru/collection/sistemy-hraneniya" class="category-inner">
+        <a href="#" class="category-inner">
 
           <div class="category-image-wrapper">
             <span class="category-image-inner image-container is-square ">
@@ -295,7 +295,7 @@
       
 
       <div class="special-category is-data-Спец.категории 3 cell-">
-        <a href="https://mactak-yaroslavl.ru/collection/avtoservisnoe-oborudovanie" class="category-inner">
+        <a href="#" class="category-inner">
 
           <div class="category-image-wrapper">
             <span class="category-image-inner image-container is-square ">
@@ -457,7 +457,7 @@
 <div class="page-headding-wrapper">
   <h1 class="page-headding">
     
-      Холдинг МАСТАК
+     О коммпании
 
     
   </h1>

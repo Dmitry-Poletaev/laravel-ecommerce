@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 
 //Main
 Route::get('/', 'HomeController@index');
-Route::get('/test', 'HomeController@test');
 
 //auth & user
 Auth::routes();
