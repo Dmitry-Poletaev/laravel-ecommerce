@@ -112,7 +112,7 @@ class HomeController extends Controller
     {
         $this->validateFeedback($request);
 
-        Mail::to('admin@mail.ru')->send(new FeedbackMail($request));
+        Mail::to('d.poletaev@vorteil-technology.ru')->send(new FeedbackMail($request));
 
         $notification = [
             'messege' => 'Благодарим вас за заявку! Наши менеджеры свяжутся с вами в ближайшее время!',

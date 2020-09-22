@@ -456,10 +456,7 @@
               
 <div class="page-headding-wrapper">
   <h1 class="page-headding">
-    
-     О коммпании
-
-    
+    О компании
   </h1>
 </div><!-- /.page_headding -->
 

@@ -21,7 +21,6 @@
 </div>
 </div>
 @elseif (Cart::content()->count() > 1)
-<p>Test1</p>
 <div class="cart-body">
   <div class="cart-list">
   @foreach ($cart as $item)
