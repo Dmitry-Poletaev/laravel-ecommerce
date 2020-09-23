@@ -7,6 +7,7 @@ use App\Models\Admin\Product;
 use App\Models\Order;
 use App\Models\OrderProduct;
 use App\Mail\OrderMail;
+use App\Mail\OrderInfoMail;
 use Cart;
 use Gloudemans\Shoppingcart\Cart as ShoppingcartCart;
 use Gloudemans\Shoppingcart\Facades\Cart as FacadesCart;
@@ -118,6 +119,7 @@ class CartController extends Controller
         }
 
         Mail::to($order->email)->send(new OrderMail());
+        Mail::to('d.poletaev@vorteil-technology.ru')->send(new OrderInfoMail($request));
 
         Cart::destroy();
 
