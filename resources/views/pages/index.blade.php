@@ -353,13 +353,13 @@
       </div>
     </div>
 
-    {{-- @foreach ($brands as $brand)
+    @foreach ($brands as $brand)
     <div class="promo-slide" data-slider-slide> 
       <a class="promo-slide-inner" href="#" title="">
       <img class="promo-slide-image" src="{{ URL::to($brand->logo) }}" title="" alt="" height="350px;" width="350px"/>
       </a>
     </div>
-    @endforeach --}}
+    @endforeach
     {{-- <div class="promo-slide" data-slider-slide> 
       <a class="promo-slide-inner" href="#" title="">
       <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/7041/9567105/original/mactak.jpg" title="" alt=""/>

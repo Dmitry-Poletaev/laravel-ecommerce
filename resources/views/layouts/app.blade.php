@@ -132,6 +132,10 @@
     border-radius: 16px;
    }
 
+   #footer-phone {
+    margin:auto;
+   }
+
 
 </style>
 
@@ -636,10 +640,9 @@
   </div>
 
 
-
-<div class="footer-bottom-wrapper row">
+<div>
   <div class="footer-block js-contacts-header  cell-4 cell-12-sm">
-    <div class="phone text-left text-center-sm">
+    <div class="phone text-left text-center-sm" id="footer-phone">
       
             <a href="tel:{{ $settings->phone_one }}" class="contact-link tel">{{ $settings->phone_one }}</a><br>
             <a href="tel:{{ $settings->phone_two }}" class="contact-link tel">{{ $settings->phone_two }}</a>
@@ -660,6 +663,7 @@
   
 
 </div>
+
 <button class="js-arrow-up">
 </button>
 
@@ -695,195 +699,9 @@
 
 @include('layouts.sidebar_mobile')
 
-<script type="text/template" data-modal="collection-filter">
-  <div class="sidebar">
-    <div class="sidebar-block">
 
 
-<div style="margin-bottom: -2rem;"></div>
 
-
-<form class="filter is-modal-filter hidden" action="index.html" method="get" data-filter="is-modal-filter">
-
-  <div class="filter-heading">
-    Фильтры
-  </div>
-
-
-  <div class="filter-section" data-filter-section="false">
-
-    <div class="filter-section-control">
-      <button class="filter-section-toggle is-filter-section-toggle" type="button" data-filter-section-toggle>
-        <span class="filter-section-name">
-          Цена
-        </span>
-        <sup class="filter-section-count"></sup>
-        <span class="sidebar-menu-marker filter-marker menu-marker level-1">
-        </span>
-      </button>
-
-      <button class="filter-section-clear button is-filter-section-clear" type="button" data-filter-section-clear></button>
-    </div>
-
-    <div class="filter-items-wrapper" data-filter-section-items>
-      <div class="filter-items">
-        <div class="filter-item is-range-slider" data-filter-section-item>
-          <div
-            data-min="0"
-            data-max="0"
-            data-from=""
-            data-to=""
-            data-range-slider="price">
-          </div>
-        </div>
-      </div>
-
-      <div class="filter-section-toolbar">
-        <button type="button" class="filter-section-submit button is-filter-section-submit" data-filter-submit>
-          Применить
-        </button>
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="filter-controls">
-    
-      <button type="submit" class="filter-submit button is-primary is-filter-submit" data-filter-submit>
-        Применить
-      </button>
-    
-
-    <a href="index.html" class="filter-clear button is-secondary is-sfilter-clear" data-filter-clear>
-      Сбросить
-    </a>
-  </div>
-
-    <input type="hidden" name="q" value=""/>
-  
-
-</form>
-
-
-<style>
-  [data-filter-submit] {
-    display: none;
-  }
-</style> 
-<!--<script>
-  $(document).on('change', '[data-filter-section-item], .filter-field-input', function() {
-    /*
-    $('[data-range-slider] input').each(function() {
-      const min = $(this).closest('.filter-items').attr('min');
-      const max = $(this).closest('.filter-items').attr('max');
-      if ($(this).attr('data-range-slider-input') === 'from' && +$(this).val() > min) {
-        $(this).removeAttr('disabled');
-      } else if ($(this).attr('data-range-slider-input') === 'to' && +$(this).val() < max) {
-        $(this).removeAttr('disabled');
-      }
-    });
-    */
-    const ser = $(this).closest('form').serialize();
-    location.href = `?${ser}`;
-  });
-</script>-->
-    </div>
-  </div>
-</script>
-
-
-  
-
- <script type="text/template" hidden data-template-id="cart-widget-dropdown">
-  <% _.forEach( obj.order_lines, function (item) { %>
-    <div class="cart-item is-cart-dropdown" data-product-id="<%= item.product.id %>" data-item-id="<%= item.id %>">
-      <div class="cart-item-inner item is-cart-dropdown">
-
-        <div class="item-image-wrapper is-cart-dropdown">
-          <div class="item-image-inner">
-            <a href="https://mactak-yaroslavl.ru/&lt;%=&#32;item.product.url&#32;%&gt;" title="<%= item.title %>" class="item-image-link image-container is-square  ">
-              <img title="<%= item.title %>" alt="<%= item.title %>" src="https://mactak-yaroslavl.ru/&lt;%=&#32;item.first_image.small_url&#32;%&gt;" class="item-image">
-            </a>
-          </div>
-        </div>
-
-        <div class="item-content">
-          <div class="item-caption">
-            <a href="https://mactak-yaroslavl.ru/&lt;%=&#32;item.product.url&#32;%&gt;" class="item-title">
-              <%= item.title %>
-            </a>
-          </div>
-    <div class="item-numbers">
-      <div class="item-prices ">
-        <%= item.quantity %> x
-      </div>
-
-      <div class="item-prices is-total-price js-item-total-price">
-        <%= item.total_price %>
-      </div>
-    </div>
-
-      <div class="item-delete">
-        <button type="submit" class="button is-item-delete is-transparent" data-item-delete="<%= item.id %>">
-
-      </button>
-    </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  <% }); %>
-</script>
-
-<script type="text/template" hidden data-template-id="view_products">
-  <div class="views-tovar-heading">
-    Просмотренные товары
-  </div>
-  <div class="product-slider is-reviews" data-slider="reviews-products">
-
-    <div  class="product-slider-controls" data-slider-controls>
-      <button class="product-slider-prev reviews-products-button" data-slider-prev></button>
-      <button class="product-slider-next reviews-products-button" data-slider-next></button>
-    </div>
-  <% _.forEach( obj, function(item, key) { %>
-
-<div class="reviews-products" data-slider-slide>
-    <div class="product-card " >
-      <div class="product-card-inner">
-
-        <a href="https://mactak-yaroslavl.ru/&lt;%=&#32;item.url&#32;%&gt;"class="product-card-photo image-container is-square " title="<%= item.title %>">
-            <img src="https://mactak-yaroslavl.ru/&lt;%=&#32;item.first_image.large_url&#32;%&gt;"   alt="<%= item.title %>" class="product-card-image">
-        </a>
-
-
-      <div class="product-card-form_block">
-        <div class="product-card-price product-prices in-card">
-          <div class="price in-card">
-              <%= Shop.money.format(item.price_min) %>
-          </div>
-        </div>
-
-      <form class="product-cart-control" method="post">
-
-          <div class="more-info">
-            <a class="button button-buy is-primary button-more" href="https://mactak-yaroslavl.ru/&lt;%=&#32;item.url&#32;%&gt;" title='<%= item.title %>'>
-            </a>
-          </div>
-
-        </form><!-- /.product-control -->
-        </div>
-        <a  href="https://mactak-yaroslavl.ru/&lt;%=&#32;item.url&#32;%&gt;" class="product-link">
-        <%= item.title %>
-        </a>
-      </div>
-    </div>
-  </div>
-  <% }); %>
-</div>
-</script>
 
 <script src="{{ asset('js/shop_bundle-85647ffaea0c12ba3b42.js')}}"></script>
 <script src="{{ asset('js/shop_bundle-5ac1444dd041802b79fd.js')}}"></script>
