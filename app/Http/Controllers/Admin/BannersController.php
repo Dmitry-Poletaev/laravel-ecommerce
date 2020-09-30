@@ -34,7 +34,7 @@ class BannersController extends Controller
             $imageName = date('dmy_H_s_i');
             $ext = strtolower($image->getClientOriginalExtension());
             $imageFullName = $imageName . '.' . $ext;
-            $uploadPath = 'media/banners/';
+            $uploadPath = 'media/images/main/';
             $imageUrl = $uploadPath . $imageFullName;
             $suceess = $image->move($uploadPath, $imageFullName);
 
@@ -89,7 +89,7 @@ class BannersController extends Controller
             $imageName = date('dmy_H_s_i');
             $ext = strtolower($image->getClientOriginalExtension());
             $imageFullName = $imageName . '.' . $ext;
-            $uploadPath = 'media/banners/';
+            $uploadPath = 'media/images/main';
             $imageUrl = $uploadPath . $imageFullName;
             $image->move($uploadPath, $imageFullName);
 

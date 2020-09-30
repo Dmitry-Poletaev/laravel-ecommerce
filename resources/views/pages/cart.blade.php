@@ -111,7 +111,6 @@
        
       </div>  
 @else
-<p>Test2</p>
 <div class="cart-body">
 <div class="cart-list">
 @foreach ($cart as $item)

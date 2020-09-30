@@ -52,9 +52,7 @@
     #mobile-filter {
         display: none;
     }
-    /* #mobile-search {
-        display: none;
-    } */
+
   
   }
 </style>
@@ -70,20 +68,21 @@
     
 <!-- icons-->
 {{-- <link rel="icon" type="image/png" sizes="16x16" href="#" /> --}}
-{{-- <link rel="stylesheet" type="text/css"  href="https://assets3.insales.ru/assets/1/6410/1227018/1587841688/jquery.fancybox.min.css" /> --}}
+<link rel="stylesheet" type="text/css"  href="https://assets3.insales.ru/assets/1/6410/1227018/1587841688/jquery.fancybox.min.css" />
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic,latin" rel="stylesheet" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="https://assets3.insales.ru/assets/1/6410/1227018/1587841688/theme.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" /> 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
 <link rel="stylesheet" href="/resources/demos/style.css">
-{{-- <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/bootstrap4/bootstrap.min.css') }}"> --}}
+
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/bootstrap4/bootstrap.min.css') }}">--}}
 
 <style>
-  body {
+ body {
     display:inline;
-  }
+  } 
   footer {
     display:inline;
   }
@@ -132,6 +131,8 @@
     height: 22px;
     border-radius: 16px;
    }
+
+
 </style>
 
   </head>
@@ -769,9 +770,8 @@
   [data-filter-submit] {
     display: none;
   }
-</style>
-
-<script>
+</style> 
+<!--<script>
   $(document).on('change', '[data-filter-section-item], .filter-field-input', function() {
     /*
     $('[data-range-slider] input').each(function() {
@@ -787,7 +787,7 @@
     const ser = $(this).closest('form').serialize();
     location.href = `?${ser}`;
   });
-</script>
+</script>-->
     </div>
   </div>
 </script>
@@ -1004,14 +1004,8 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-{{-- <script
-src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous">
-</script> --}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<!-- jQuery library -->
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+
 
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

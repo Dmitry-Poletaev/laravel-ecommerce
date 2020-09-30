@@ -12,7 +12,7 @@
 @endsection
 @section('content')
 
-<script type="text/javascript">
+{{-- <script type="text/javascript">
 (function(){
     var _backcallForm = {
       form: {
@@ -48,21 +48,17 @@
           required: true
         },
       ],
-
       sendTo: Shop.sendMessage,
       onValid: function () {},
     };
-
   $(document).on('click', '.js-backcall-toggle', function (event) {
     event.preventDefault();
-
     alertify.modal({
       formDefination: _backcallForm
     }).set('title', 'Обратный звонок' );
   });
 }());
-
-</script>
+</script> --}}
 
  
 
@@ -96,58 +92,7 @@
       </div>
     @endforeach
     
-      {{-- <div class="promo-slide" data-slider-slide>
-        
-          <a class="promo-slide-inner" href="#" >
-          <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/5250/12194946/original/P33431-050B.jpg"  alt="Слайдер Блок 16" />
-        </a>
-          
-      </div>
-    
-      <div class="promo-slide" data-slider-slide>
-        
-          <a class="promo-slide-inner" href="#" >
-      
-          <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/2014/10823646/original/NC-4233QH.jpg"  alt="Слайдер Блок 14">
-          </a>
-        
-      </div>
-    
-      <div class="promo-slide" data-slider-slide>
-        
-          <a class="promo-slide-inner" href="#" >
-        
-          <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/353/9806177/original/m7_logement.jpg"  alt="Слайдер Блок 11" >
-        
-          </a>
-        
-      </div>
-    
-      <div class="promo-slide" data-slider-slide>
-        
-          <a class="promo-slide-inner" href="#" >
-          <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/354/9806178/original/moduli_instrumentov_king_tony.jpg"  alt="Слайдер Блок 12" />
-        
-          </a>
-        
-      </div>
-    
-      <div class="promo-slide" data-slider-slide>
-        
-          <a class="promo-slide-inner" href="#" >
-          <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/352/9806176/original/logement_kingtony.jpg"  alt="Слайдер Блок 13" />
-          </a>
-        
-      </div>
-    
-      <div class="promo-slide" data-slider-slide>
-        
-          <a class="promo-slide-inner" href="#" >
-          <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/5900/10352396/original/servis_924bedded430086fd5314e90233d4ff1.jpg"  alt="Слайдер Блок 10" />
-          </a>
-        
-      </div>
-     --}}
+
 
     <div class="promo-slider-pagination" data-slider-pagination></div>
 
@@ -156,6 +101,7 @@
       <button class="promo-slider-next" data-slider-next></button>
     </div>
   </div>
+
 
 
 <div class="special-categories-wrapper">
@@ -212,7 +158,7 @@
 
       <div class="special-category is-data-Спец.категории 2 cell-">
         <a href="#" class="category-inner">
-
+        
           <div class="category-image-wrapper">
             <span class="category-image-inner image-container is-square ">
 
@@ -407,13 +353,13 @@
       </div>
     </div>
 
-    @foreach ($brands as $brand)
+    {{-- @foreach ($brands as $brand)
     <div class="promo-slide" data-slider-slide> 
       <a class="promo-slide-inner" href="#" title="">
       <img class="promo-slide-image" src="{{ URL::to($brand->logo) }}" title="" alt="" height="350px;" width="350px"/>
       </a>
     </div>
-    @endforeach
+    @endforeach --}}
     {{-- <div class="promo-slide" data-slider-slide> 
       <a class="promo-slide-inner" href="#" title="">
       <img class="promo-slide-image" src="https://static-eu.insales.ru/files/1/7041/9567105/original/mactak.jpg" title="" alt=""/>
@@ -456,7 +402,10 @@
               
 <div class="page-headding-wrapper">
   <h1 class="page-headding">
-    О компании
+    
+      Холдинг МАСТАК
+
+    
   </h1>
 </div><!-- /.page_headding -->
 
@@ -505,7 +454,6 @@
         <a href="#" class="article-preview-link">Идеи подарков на 23 февраля</a>
       </p>
     </div>
-
     <div class="article-preview-body">
       <div class="article-preview-introtext editor">
         
@@ -513,8 +461,6 @@
         
       </div>
     </div>
-
-
   </div> --}}
 </div>
 

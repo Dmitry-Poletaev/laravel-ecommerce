@@ -38,6 +38,14 @@ class HomeController extends Controller
         return view('pages.index', compact( 'brands', 'settings', 'banners'));
     }
 
+    public function test()
+    {
+        $banners = DB::table('banners')->get();
+
+        return view('pages.test', compact('banners'));
+
+    }
+
 
 
     public function validateFeedback($request)
