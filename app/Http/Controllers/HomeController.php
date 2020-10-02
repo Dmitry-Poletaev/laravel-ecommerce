@@ -56,9 +56,9 @@ class HomeController extends Controller
             'policy' => 'accepted',
         ],
         [
-            'name.required' => 'Поле обязательно для заполнения!',
-            'phone.required' => 'Поле обязательно для заполнения!',
-            'policy.accepted' => 'Поле обязательно для заполнения!',
+            'name.required' => 'Введите имя!',
+            'phone.required' => 'Введите телеофн!',
+            'policy.accepted' => 'Подтвердите согласие с политикой конфиденциальности!',
         ]
 
         );
