@@ -400,14 +400,14 @@
 
             
               
-<div class="page-headding-wrapper">
+{{-- <div class="page-headding-wrapper">
   <h1 class="page-headding">
     
       Холдинг МАСТАК
 
     
   </h1>
-</div><!-- /.page_headding -->
+</div><!-- /.page_headding --> --}}
 
 
 <div class="index-description editor">

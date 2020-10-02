@@ -51,7 +51,7 @@ class HomeController extends Controller
     public function validateFeedback($request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'required|max:100',
             'phone' => 'required|max:100',
             'policy' => 'accepted',
         ],
