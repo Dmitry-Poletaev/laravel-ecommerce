@@ -474,6 +474,7 @@
 <!-- Форма обратного звонка -->
 <div id="modal-feedback" uk-modal>
   <div class="uk-modal-dialog uk-modal-body">
+    <button class="uk-modal-close-outside" type="button" uk-close></button>
     <h2 class="uk-modal-title">Обратный звонок</h2>
     @if ($errors->any())
       <div class="uk-alert-danger" uk-alert>
