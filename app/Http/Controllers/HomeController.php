@@ -82,7 +82,7 @@ class HomeController extends Controller
                       $user->save();
                       Auth::logout();  
                       $notification = [
-                        'messege'=>'Password Changed Successfully ! Now Login with Your New Password',
+                        'messege'=>'Пароль успешно изменен ! Теперь войдите с новым паролем',
                         'alert-type'=>'success'
                         ];
                        return Redirect()->route('login')->with($notification); 
@@ -95,7 +95,7 @@ class HomeController extends Controller
                  }     
       }else{
         $notification = [
-                'messege'=>'Old Password not matched!',
+                'messege'=>'Старый пароль не совпадает!',
                 'alert-type'=>'error'
                 ];
                return Redirect()->back()->with($notification);
