@@ -48,10 +48,14 @@
     display: none;
   }
 
+  .sidebar-block
+
   @media only screen and (min-width: 975px) {
     #mobile-filter {
         display: none;
-    }
+  }
+
+ 
 
   
   }
@@ -488,7 +492,7 @@
             <input class="uk-input" name="phone" type="text" placeholder="Телефон">
         </div>
         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-          <label><input class="uk-checkbox" name="policy" type="checkbox"> Настоящим подтверждаю, что я ознакомлен и согласен с условиями оферты и политики конфиденциальности.</label>
+        <label><input class="uk-checkbox" name="policy" type="checkbox"> Настоящим подтверждаю, что я ознакомлен и согласен с условиями <a href="{{ url('/policy') }}">оферты и политики конфиденциальности.</a></label>
       </div>
       <button type="submit" class="uk-button uk-button-primary">Отправить</button>
     </form>

@@ -417,7 +417,7 @@
 {!! $settings->description !!}
   </div>
             
-          </div>
+  </div>
 
           
   <div class="cell-3 cell-4-md hidden-sm flex-first">
