@@ -33,7 +33,7 @@
                 @foreach ($subcat as $item)
                   <li class="mobile-sidebar-menu-item menu-item level-1">
                     <div class="mobile-sidebar-menu-item-controls menu-item-controls level-1">
-                      <a href="#" class="mobile-sidebar-menu-link menu-link level-1" data-menu-link="gotovye-resheniya" data-menu-link-source="collection">
+                      <a href="{{ url('product/all/' . $item->id) }}" class="mobile-sidebar-menu-link menu-link level-1" data-menu-link="gotovye-resheniya" data-menu-link-source="collection">
                         {{$item->name}}
                       </a>
                       
