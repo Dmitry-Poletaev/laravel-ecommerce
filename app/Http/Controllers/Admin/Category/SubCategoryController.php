@@ -31,20 +31,6 @@ class SubCategoryController extends Controller
         return view('admin.category.subcategory_create', compact('categories'));
     }
 
-    // название в slug
-    // public function slugify($text)
-    // {
-    //     $text = (string) $text; // преобразуем в строковое значение
-    //     $text = trim($text); // убираем пробелы в начале и конце строки
-    //     $text = function_exists('mb_strtolower') ? mb_strtolower($text) : strtolower($text); // переводим строку в нижний регистр 
-    //     $text = preg_replace('~[^\pL\d]+~u', '-', $text); // заменяем пробелы
-    //     $text = strtr($text, ['а'=>'a','б'=>'b','в'=>'v','г'=>'g','д'=>'d','е'=>'e','ё'=>'e','ж'=>'j','з'=>'z','и'=>'i','й'=>'y','к'=>'k','л'=>'l','м'=>'m','н'=>'n','о'=>'o','п'=>'p','р'=>'r','с'=>'s','т'=>'t','у'=>'u','ф'=>'f','х'=>'h','ц'=>'c','ч'=>'ch','ш'=>'sh','щ'=>'shch','ы'=>'y','э'=>'e','ю'=>'yu','я'=>'ya','ъ'=>'','ь'=>'']); //транслитерация
-    
-    //     if (empty($text)) {
-    //         return 'n-a';
-    //     }
-    //     return $text;
-    // }
 
     public function storeSubCategory(Request $request)
     {

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Brand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class BrandController extends Controller
 {
@@ -22,19 +23,19 @@ class BrandController extends Controller
     }
     
     // название в slug
-    public function slugify($text)
-    {
-        $text = (string) $text; // преобразуем в строковое значение
-        $text = trim($text); // убираем пробелы в начале и конце строки
-        $text = function_exists('mb_strtolower') ? mb_strtolower($text) : strtolower($text); // переводим строку в нижний регистр 
-        $text = preg_replace('~[^\pL\d]+~u', '-', $text); // заменяем пробелы
-        $text = strtr($text, ['а'=>'a','б'=>'b','в'=>'v','г'=>'g','д'=>'d','е'=>'e','ё'=>'e','ж'=>'j','з'=>'z','и'=>'i','й'=>'y','к'=>'k','л'=>'l','м'=>'m','н'=>'n','о'=>'o','п'=>'p','р'=>'r','с'=>'s','т'=>'t','у'=>'u','ф'=>'f','х'=>'h','ц'=>'c','ч'=>'ch','ш'=>'sh','щ'=>'shch','ы'=>'y','э'=>'e','ю'=>'yu','я'=>'ya','ъ'=>'','ь'=>'']); //транслитерация
+    // public function slugify($text)
+    // {
+    //     $text = (string) $text; // преобразуем в строковое значение
+    //     $text = trim($text); // убираем пробелы в начале и конце строки
+    //     $text = function_exists('mb_strtolower') ? mb_strtolower($text) : strtolower($text); // переводим строку в нижний регистр 
+    //     $text = preg_replace('~[^\pL\d]+~u', '-', $text); // заменяем пробелы
+    //     $text = strtr($text, ['а'=>'a','б'=>'b','в'=>'v','г'=>'g','д'=>'d','е'=>'e','ё'=>'e','ж'=>'j','з'=>'z','и'=>'i','й'=>'y','к'=>'k','л'=>'l','м'=>'m','н'=>'n','о'=>'o','п'=>'p','р'=>'r','с'=>'s','т'=>'t','у'=>'u','ф'=>'f','х'=>'h','ц'=>'c','ч'=>'ch','ш'=>'sh','щ'=>'shch','ы'=>'y','э'=>'e','ю'=>'yu','я'=>'ya','ъ'=>'','ь'=>'']); //транслитерация
     
-        if (empty($text)) {
-            return 'n-a';
-        }
-        return $text;
-    }
+    //     if (empty($text)) {
+    //         return 'n-a';
+    //     }
+    //     return $text;
+    // }
 
     public function storeBrand(Request $request)
     {
@@ -45,7 +46,7 @@ class BrandController extends Controller
 
         $data = [];
         $data['name'] = $request->name;
-        $data['slug'] = $this->slugify($request->name) . $request->id;
+        $data['slug'] = Str::slug($request->name, '_');
         $image = $request->file('logo');
 
         if ($image) {
